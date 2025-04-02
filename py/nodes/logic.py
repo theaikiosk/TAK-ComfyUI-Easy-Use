@@ -1363,7 +1363,7 @@ class showAnything:
     INPUT_IS_LIST = True
     OUTPUT_NODE = True
     FUNCTION = "log_input"
-    CATEGORY = "EasyUse/Logic"
+    CATEGORY = "Tak Mods"
 
     def log_input(self, unique_id=None, extra_pnginfo=None, **kwargs):
 
