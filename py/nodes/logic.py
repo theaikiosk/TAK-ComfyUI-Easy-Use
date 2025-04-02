@@ -1353,7 +1353,7 @@ class showAnything:
     @classmethod
     def INPUT_TYPES(s):
         return {"required": {
-            "key": ("STRING", {"default": ""}),
+            "tak_key": ("STRING", {"default": ""}),
         }, "optional": {"anything": (any_type, {}), },
                 "hidden": {"unique_id": "UNIQUE_ID", "extra_pnginfo": "EXTRA_PNGINFO",
                            }}
@@ -1392,9 +1392,9 @@ class showAnything:
             if node:
                 node["widgets_values"] = [values]
         if isinstance(values, list) and len(values) == 1:
-            return {"ui": {"text": values}, "result": (values[0],), }
+            return {"ui": {"text": values, "tak_key": kwargs.get("tak_key", "")}, "result": (values[0],), }
         else:
-            return {"ui": {"text": values}, "result": (values,), }
+            return {"ui": {"text": values, "tak_key": kwargs.get("tak_key", "")}, "result": (values,), }
 
 class showTensorShape:
     @classmethod
