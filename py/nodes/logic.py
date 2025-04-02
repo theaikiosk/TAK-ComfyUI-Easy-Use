@@ -1352,7 +1352,9 @@ class convertAnything:
 class showAnything:
     @classmethod
     def INPUT_TYPES(s):
-        return {"required": {}, "optional": {"anything": (any_type, {}), },
+        return {"required": {
+            "key": ("STRING", {"default": ""}),
+        }, "optional": {"anything": (any_type, {}), },
                 "hidden": {"unique_id": "UNIQUE_ID", "extra_pnginfo": "EXTRA_PNGINFO",
                            }}
 
